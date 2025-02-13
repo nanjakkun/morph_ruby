@@ -7,6 +7,8 @@ ruby '3.3.7'
 
 gem 'activesupport', '~> 8.0.1'
 
+gem 'zeitwerk'
+
 gem 'rake'
 
 gem 'rubocop'
