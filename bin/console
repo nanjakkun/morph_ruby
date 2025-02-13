@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+
+load File.expand_path('../../lib/morph.rb', __FILE__)
+
+require "irb"
+
+IRB.start(__FILE__)
