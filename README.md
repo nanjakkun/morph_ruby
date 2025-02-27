@@ -1,5 +1,6 @@
 # Morph Ruby
 Ruby Implemention of Morphological Analysis
+
 形態素解析のRuby実装
 
 # Notice
@@ -23,5 +24,12 @@ bundle install
 # Usage
 
 ## Launch console
-
 bin/console
+
+
+## Run tests
+bundle exec rspec
+
+
+## Run rubocop
+bundle exec rubocop

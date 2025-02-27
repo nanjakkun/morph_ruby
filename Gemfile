@@ -14,5 +14,4 @@ gem 'rake'
 gem 'rspec', '~> 3.13'
 
 gem 'rubocop'
-gem 'rubocop-minitest'
 gem 'rubocop-performance'

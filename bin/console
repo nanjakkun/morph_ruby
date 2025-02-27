@@ -1,7 +1,8 @@
 #!/usr/bin/env ruby
+# frozen_string_literal: true
 
-load File.expand_path('../../lib/morph.rb', __FILE__)
+load File.expand_path('../lib/morph.rb', __dir__)
 
-require "irb"
+require 'irb'
 
 IRB.start(__FILE__)
