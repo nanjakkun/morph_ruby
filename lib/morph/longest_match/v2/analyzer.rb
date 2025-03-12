@@ -19,9 +19,7 @@ module Morph
             res = @dictionary.search(key)
 
             if res && (index + len <= text.length)
-              if res.word
-                longest_candidate = res.word
-              end
+              longest_candidate = res.word if res.word
 
               len += 1
             else
