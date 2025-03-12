@@ -1,0 +1,32 @@
+require:
+  - rubocop-performance
+
+AllCops:
+  TargetRubyVersion: 3.3
+  Exclude:
+    - 'bin/**/*'
+    - 'vendor/**/*'
+    - 'log/**/*'
+    - 'tmp/**/*'
+    - 'node_modules/**/*'
+  Include:
+    - '**/*.rb'
+    - '**/*.rake'
+    - '**/Rakefile'
+    - '**/Gemfile'
+  NewCops: enable
+  SuggestExtensions: false
+
+Metrics/AbcSize:
+  Enabled: false
+
+Metrics/ClassLength:
+  Exclude:
+  - 'spec/**'
+
+Metrics/MethodLength:
+  Enabled: false
+
+# Configuration parameters: AllowedConstants.
+Style/Documentation:
+  Enabled: false
