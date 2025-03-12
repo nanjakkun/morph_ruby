@@ -11,24 +11,23 @@ module Morph
         def analyze(text)
           results = []
           index = 0
+          len = 1
 
           while index < text.length
-            longest_match = nil
-            longest_length = 0
+            key = text[index, len]
 
-            @dictionary.each do |word|
-              if text[index, word.length] == word && word.length > longest_length
-                longest_match = word
-                longest_length = word.length
+            res = @dictionary.search(key)
+
+            if res && (index + len <= text.length)
+              if res.word
+                longest_candidate = res.word
               end
-            end
 
-            if longest_match
-              results << longest_match
-              index += longest_length
+              len += 1
             else
-              results << text[index]
-              index += 1
+              results << longest_candidate
+              index += longest_candidate.key.length
+              len = 1
             end
           end
 

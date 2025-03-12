@@ -29,7 +29,7 @@ module Morph
 
         node = node.children[char]
       end
-      node.word
+      node
     end
 
     def delete(key)

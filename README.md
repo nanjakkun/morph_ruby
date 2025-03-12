@@ -10,7 +10,12 @@ The implementation was done for understanding, so the performance is not good.
 # Implements
 
 ## Morph::LongestMatch::V1::Analyzer
-With longest match algorithm
+- With longest match algorithm
+
+
+## Morph::LongestMatch::V2::Analyzer
+- With longest match algorithm
+- Using Trie algorithm
 
 
 # Requirement

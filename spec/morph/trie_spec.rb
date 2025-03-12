@@ -10,13 +10,13 @@ RSpec.describe Morph::Trie do
       trie.insert(Morph::Word.new('apple'))
       trie.insert(Morph::Word.new('app'))
 
-      expect(trie.search('apple')).not_to be_nil
-      expect(trie.search('apple').key).to eq 'apple'
+      expect(trie.search('apple').word).not_to be_nil
+      expect(trie.search('apple').word.key).to eq 'apple'
 
-      expect(trie.search('app')).not_to be_nil
-      expect(trie.search('app').key).to eq 'app'
+      expect(trie.search('app').word).not_to be_nil
+      expect(trie.search('app').word.key).to eq 'app'
 
-      expect(trie.search('appl')).to be_nil
+      expect(trie.search('appl').word).to be_nil
     end
   end
 
@@ -27,12 +27,12 @@ RSpec.describe Morph::Trie do
 
       trie.delete('apple')
 
-      expect(trie.search('apple')).to be_nil
+      expect(trie.search('apple')&.word).to be_nil
 
-      expect(trie.search('app')).not_to be_nil
-      expect(trie.search('app').key).to eq 'app'
+      expect(trie.search('app').word).not_to be_nil
+      expect(trie.search('app').word.key).to eq 'app'
 
-      expect(trie.search('appl')).to be_nil
+      expect(trie.search('appl')&.word).to be_nil
     end
   end
 end
