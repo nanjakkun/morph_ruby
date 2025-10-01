@@ -38,6 +38,7 @@ module Morph
 
     private
 
+    # rubocop:disable Naming/PredicateMethod
     def delete_helper(node, key, depth)
       return false if node.nil?
 
@@ -59,5 +60,6 @@ module Morph
 
       false
     end
+    # rubocop:enable Naming/PredicateMethod
   end
 end
