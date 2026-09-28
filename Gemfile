@@ -5,7 +5,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.4.10'
 
-gem 'activesupport', '~> 8.1.3'
+gem 'activesupport', '~> 8.1.4'
 
 gem 'zeitwerk'
 
